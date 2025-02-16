@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Забронировать</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .booking-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 0 20px;
+        }
+
+        .footer-section {
+            flex: 1;
+            text-align: center;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .footer-section p {
+            font-size: 0.9em;
+            margin: 5px 0;
+        }
+
+        .footer-section a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Stay Smart</h1>
+    </header>
+    <div class="booking-container">
+        <h2>Бронирование жилья</h2>
+        <div class="image-container">
+            <img src="hotel1.jpg" alt="Отель 1">
+        </div>
+        <form id="bookingForm">
+            <label for="hotel">Отель:</label>
+            <input type="text" id="hotel" name="hotel" value="Отель Гранд Эмпир" readonly>
+
+            <label for="checkin">Дата заезда:</label>
+            <input type="date" id="checkin" name="checkin" required>
+
+            <label for="checkout">Дата выезда:</label>
+            <input type="date" id="checkout" name="checkout" required>
+
+            <label for="guests">Количество гостей:</label>
+            <input type="number" id="guests" name="guests" required>
+
+            <label for="rooms">Количество номеров:</label>
+            <input type="number" id="rooms" name="rooms" required>
+
+            <button type="submit">Забронировать</button>
+        </form>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section company">
+                <h3>О нас</h3>
+                <p>Stay Smart — удобный сервис для бронирования жилья.</p>
+            </div>
+            <div class="footer-section contacts">
+                <h3>Контакты</h3>
+                <p>Адрес: ул.Гагарина 35, Вологда, Россия</p>
+                <p>Телефон: +7(911)-592-30-82</p>
+                <p>Email: latkinewg@yandex.ru</p>
+            </div>
+            <div class="footer-section social">
+                <h3>Социальные сети</h3>
+                <p>
+                    <a href="#">Вконтакте</a> |
+                    <a href="#">Telegramm</a> |
+                    <a href="#">Instagram</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Бронирование завершено!');
+        });
+    </script>
+</body>
+</html>
+

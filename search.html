@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+            margin-top: 40px;
+            border-radius: 16px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<header class="header">
+    <h1 class="header-title">Stay Smart</h1>
+</header>
+
+<body>
+    <div class="search-container">
+    </div>
+
+    <!-- Контейнер для карты -->
+    <div id="map"></div>
+
+    <!-- Подключение библиотеки Leaflet -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Инициализация карты
+        var map = L.map('map').setView([59.208429, 39.892744], 13);
+
+        // Добавление слоя карты
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        }).addTo(map);
+    </script>
+</body>
+</html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="search-container">
+        <h2>Поиск</h2>
+        <form id="searchForm">
+            <label for="city">Город:</label>
+            <input type="text" id="city" name="city" required>
+            <label for="hotel">Отель:</label>
+            <input type="text" id="hotel" name="hotel" required>
+            <label for="checkin">Дата заезда:</label>
+            <input type="date" id="checkin" name="checkin" required>
+            <label for="checkout">Дата выезда:</label>
+            <input type="date" id="checkout" name="checkout" required>
+            <label for="guests">Количество гостей:</label>
+            <input type="number" id="guests" name="guests" required>
+            <label for="rooms">Количество номеров:</label>
+            <input type="number" id="rooms" name="rooms" required>
+            <button type="submit">Поиск</button>
+        </form>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример страницы</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="content">
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section company">
+                <h3>О нас</h3>
+                <p>Stay Smart — удобный сервис для бронирования жилья.</p>
+            </div>
+            <div class="footer-section contacts">
+                <h3>Контакты</h3>
+                <p>Адрес: ул.Гагарина 35, Вологда, Россия</p>
+                <p>Телефон: +7(911)-592-30-82</p>
+                <p>Email: latkinewg@yandex.ru</p>
+            </div>
+            <div class="footer-section social">
+                <h3>Социальные сети</h3>
+                <p>
+                    <a href="#">Вконтакте</a> |
+                    <a href="#">Telegramm</a> |
+                    <a href="#">Instagram</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+    </div>
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Поиск запущен');
+        });
+    </script>
+</body>
+</html>

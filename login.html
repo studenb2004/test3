@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #90AEB9; /* Цвет фона */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: absolute;
+            top: 0;
+        }
+
+        .header-title {
+            margin: 0;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .login-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .login-container form label {
+            display: block;
+            margin: 10px 0 5px;
+            text-align: left;
+        }
+
+        .login-container form input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .login-container form button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .login-container form button:hover {
+            background-color: #45a049;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 0 20px;
+        }
+
+        .footer-section {
+            flex: 1;
+            text-align: center;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .footer-section p {
+            font-size: 0.9em;
+            margin: 5px 0;
+        }
+
+        .footer-section a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-title">Stay Smart</h1>
+    </header>
+
+    <div class="login-container">
+        <h2>Вход</h2>
+        <form id="loginForm">
+            <label for="email">Почта:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" pattern="\+7\(\d{3}\)\d{3}-\d{2}-\d{2}" placeholder="+7(***)***-**-**" required>
+            <button type="submit">Готово</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section company">
+                <h3>О нас</h3>
+                <p>Stay Smart — удобный сервис для бронирования жилья.</p>
+            </div>
+            <div class="footer-section contacts">
+                <h3>Контакты</h3>
+                <p>Адрес: ул.Гагарина 35, Вологда, Россия</p>
+                <p>Телефон: +7(911)-592-30-82</p>
+                <p>Email: latkinewg@yandex.ru</p>
+            </div>
+            <div class="footer-section social">
+                <h3>Социальные сети</h3>
+                <p>
+                    <a href="#">Вконтакте</a> |
+                    <a href="#">Telegram</a> |
+                    <a href="#">Instagram</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
+
+
